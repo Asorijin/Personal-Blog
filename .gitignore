@@ -1,5 +1,7 @@
 *
 
-!*.md
+!/docs/posts/*.md
+
+!/docs/index.md
 
 !*/
