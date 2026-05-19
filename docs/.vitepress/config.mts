@@ -47,6 +47,20 @@ export default defineConfig({
           { text: 'TTypes', link: '/posts/UE/UE_TTypes' },
           { text: 'Without CRTP', link: '/posts/UE/UE_without_CRTP' }
         ]
+      },
+      {
+        text: 'Claude Code',
+        collapsed: true,
+        items: [
+          { text: '主工作流解析', link: '/posts/ClaudeCode/claude-code-analysis' }
+        ]
+      },
+      {
+        text: '算法',
+        collapsed: true,
+        items: [
+          { text: 'GJK 碰撞检测', link: '/posts/算法/GJK算法' }
+        ]
       }
     ]
   }
