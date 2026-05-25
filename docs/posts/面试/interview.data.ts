@@ -1,23 +1,18 @@
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader('posts/**/*.md', {
+export default createContentLoader('posts/面试/**/*.md', {
   transform(posts) {
     return posts
-      .filter(post => !post.url.endsWith('/'))
+      .filter(post => !post.url.endsWith('/面试/'))
       .map(post => {
         let displayDate = ''
         if (post.frontmatter.date) {
           const date = new Date(post.frontmatter.date)
           displayDate = date.toISOString().slice(0, 10)
         }
-
-        const urlParts = post.url.split('/')
-        const category = urlParts[2] || 'Uncategorized'
-
         return {
           ...post,
-          displayDate,
-          category
+          displayDate
         }
       })
       .sort((a, b) => {
@@ -27,6 +22,3 @@ export default createContentLoader('posts/**/*.md', {
       })
   }
 })
-
-
-
