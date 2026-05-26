@@ -174,3 +174,32 @@
   font-size: 0.85rem;
   color: var(--vp-c-text-2);
 }
+
+/* 折叠块样式 */
+details {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  user-select: none;
+  color: var(--vp-c-text-1);
+}
+
+details summary:hover {
+  color: var(--vp-c-brand-1);
+}
+
+details[open] {
+  padding-bottom: 1rem;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
